@@ -20,6 +20,8 @@ export type AppItem = {
   githubUrl?: string;
   techStack: string[];
   thumbnail?: string;
+  thumbnailWidth?: number;
+  thumbnailHeight?: number;
   reason?: string;
   struggles?: string;
   learning?: string;
@@ -96,4 +98,8 @@ public/apps/day-001/thumbnail.png
 
 ```ts
 thumbnail: "/apps/day-001/thumbnail.png"
+thumbnailWidth: 1600
+thumbnailHeight: 900
 ```
+
+`thumbnailWidth` と `thumbnailHeight` はアップロードした画像の実寸を入れる。詳細ページではこの比率を `aspect-ratio` として使うため、16:9、16:25 など画像ごとの縦横比に合わせて表示できる。

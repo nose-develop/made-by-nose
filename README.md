@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# made-by-nose
 
-## Getting Started
+「普通の会社員が、AI時代に置いて行かれないように100日間アプリを作る記録」として、1日1アプリ100日チャレンジの制作物を掲載するポートフォリオサイトです。
 
-First, run the development server:
+## 技術スタック
+
+- Next.js `16.2.6`
+- React `19.2.4`
+- TypeScript
+- Tailwind CSS `4`
+- App Router
+- Vercel
+
+## ローカル起動
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで `http://localhost:3000` を開きます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ビルド確認
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+Windows PowerShell の実行ポリシーで `npm` が止まる場合は、次のように実行します。
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm.cmd run lint
+npm.cmd run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## アプリを追加する方法
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+アプリ情報は `src/data/apps.ts` で管理しています。Day2以降は配列に1件追加すると、トップページ、詳細ページ、サイトマップに反映されます。
 
-## Deploy on Vercel
+```ts
+{
+  day: 2,
+  slug: "example-app",
+  title: "サンプルアプリ",
+  description: "アプリの概要を1から2文で記載します。",
+  date: "2026-05-13",
+  status: "published",
+  appUrl: "https://example.vercel.app",
+  githubUrl: "https://github.com/example/example-app",
+  techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+  thumbnail: "/apps/day-002/thumbnail.png",
+  thumbnailWidth: 1600,
+  thumbnailHeight: 900,
+  reason: "作った理由を書きます。",
+  struggles: "苦労した点を書きます。",
+  learning: "学びを書きます。",
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+スクリーンショットを使う場合は `public/apps/day-xxx/thumbnail.png` に配置し、`thumbnail` に public ルートからのパスを指定します。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`thumbnailWidth` と `thumbnailHeight` には、アップロードした画像の実寸を入れます。例えば 16:9 の画像なら `1600` と `900`、縦長の 16:25 なら `1600` と `2500` のように指定します。詳細ページではこの比率に合わせて画像枠が作られ、画像全体が切れずに収まります。
+
+## 主なファイル
+
+- `app/page.tsx`: トップページ
+- `app/apps/[slug]/page.tsx`: アプリ詳細ページ
+- `app/not-found.tsx`: 404ページ
+- `src/data/apps.ts`: アプリ情報
+- `src/lib/apps.ts`: アプリ取得ユーティリティ
+- `src/components/`: 共通UI
+- `documents/`: 設計書
+
+## デプロイ
+
+GitHubにpushすると、Vercel側の連携設定により自動デプロイされる想定です。独自ドメインは `https://www.madebynose.com/` を想定しています。
