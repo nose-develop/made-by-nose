@@ -41,4 +41,25 @@ export const apps: AppItem[] = [
     thumbnailWidth: 1601,
     thumbnailHeight: 907,
   },
+  {
+    day: 2,
+    slug: "warikan-app",
+    title: "飲み会の割り勘アプリ",
+    description:
+      "飲み会の時のお会計の割り勘を様々な方法で決めるアプリ",
+    date: "2026-05-12",
+    status: "published",
+    techStack: ["Next.js", "TypeScript", "Vercel", "Github", "Git"],
+    reason: "よく飲みに行くので，たまにはこういったアプリがあると盛り上がりそうと思ったから",
+    struggles: 
+      `コーディングというより，サブドメインをどのようにして設定するかわからなかったので，その調査と実装`,
+    learning:
+      `初めに基盤を作り，そのあと気になる点をブランチごとに伝えることで何をしているかがわかりやすかった
+      今回は1人だが，もし複数人での開発になるとこのあたりをしっかりと決めて進めていきたい`,
+    appUrl: "https://warikan.madebynose.com/",
+    githubUrl: "https://github.com/nose-develop/spriting_bills_method",
+    thumbnail: "/apps/day-002.png",
+    thumbnailWidth: 1601,
+    thumbnailHeight: 907,
+  },
 ];
