@@ -62,4 +62,24 @@ export const apps: AppItem[] = [
     thumbnailWidth: 1601,
     thumbnailHeight: 907,
   },
+  {
+    day: 3,
+    slug: "Hungry Timer",
+    title: "ハングリータイマー",
+    description:
+      "ごはんを食べなかった時間を計測するアプリ",
+    date: "2026-05-13",
+    status: "published",
+    techStack: ["Next.js", "TypeScript", "Vercel", "Github", "Git"],
+    reason: "絶賛ファスティング中なので...",
+    struggles: 
+      `github上でコンフリクトが起こったのでその解消`,
+    learning:
+      `ファスティング生活が佳境に入り集中力がなくなったことを実感`,
+    appUrl: "https://hungrytimer.madebynose.com/",
+    githubUrl: "https://github.com/nose-develop/hungry_timer",
+    thumbnail: "/apps/day-003.png",
+    thumbnailWidth: 1601,
+    thumbnailHeight: 907,
+  },
 ];
