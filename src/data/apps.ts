@@ -64,7 +64,7 @@ export const apps: AppItem[] = [
   },
   {
     day: 3,
-    slug: "Hungry Timer",
+    slug: "hungry-timer",
     title: "ハングリータイマー",
     description:
       "ごはんを食べなかった時間を計測するアプリ",
