@@ -82,4 +82,25 @@ export const apps: AppItem[] = [
     thumbnailWidth: 1601,
     thumbnailHeight: 907,
   },
+  {
+    day: 4,
+    slug: "kyo-kore",
+    title: "今日これだけメーカー",
+    description:
+      "したいことはたくさんあるのに何をすればいいかわからないあなたへ",
+    date: "2026-05-14",
+    status: "published",
+    techStack: ["Next.js", "TypeScript", "Vercel", "Github", "Git"],
+    reason: `したいことがたくさんあるけど結局何をしたらいいかわからない
+    そしたら結局何もできていない，ということがよくあるのでとりあえず何をするか勝手に決めてもらったほうがいいと思い作りました`,
+    struggles: 
+      `Codexが優秀で苦労した点が特になくなってきた`,
+    learning:
+      `自分がほしいものって小さくても，それを解決するようなアプリを作れると便利だなと思う（自己満）`,
+    appUrl: "https://kyokore.madebynose.com/",
+    githubUrl: "https://github.com/nose-develop/kyo_kore",
+    thumbnail: "/apps/day-004.png",
+    thumbnailWidth: 1601,
+    thumbnailHeight: 907,
+  },
 ];
