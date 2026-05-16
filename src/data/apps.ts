@@ -103,4 +103,24 @@ export const apps: AppItem[] = [
     thumbnailWidth: 1601,
     thumbnailHeight: 907,
   },
+  {
+    day: 5,
+    slug: "throw-complaints",
+    title: "グチ投げ",
+    description:
+      "グチを投げるだけのアプリ",
+    date: "2026-05-16",
+    status: "published",
+    techStack: ["Next.js", "TypeScript", "Vercel", "Github", "Git"],
+    reason: `アニメーションを用いたものを作成したかったから`,
+    struggles: 
+      `ポリゴンを用いて人を作成したが，動作の修正が難しかった`,
+    learning:
+      `愚痴を投げる動作で，完璧を求めるのではなくどこか懐かしさや不完全さを感じることも大事かと思った（言い訳）`,
+    appUrl: "https://throwcomplaints.madebynose.com/",
+    githubUrl: "https://github.com/nose-develop/throw_complaints",
+    thumbnail: "/apps/day-005.png",
+    thumbnailWidth: 1601,
+    thumbnailHeight: 907,
+  },
 ];
