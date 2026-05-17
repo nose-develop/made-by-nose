@@ -123,4 +123,24 @@ export const apps: AppItem[] = [
     thumbnailWidth: 1601,
     thumbnailHeight: 907,
   },
+  {
+    day: 6,
+    slug: "bulk-open",
+    title: "サイト一括オープン",
+    description:
+      "複数のサイトをボタン一つでオープンするアプリ",
+    date: "2026-05-17",
+    status: "published",
+    techStack: ["Next.js", "TypeScript", "Vercel", "Github", "Git"],
+    reason: `必要なサイトを1度に開けられると便利だと思ったから`,
+    struggles: 
+      `1つの別ウィンドウでもサイトを開けるようにしようとしたが，1つの別ウィンドウには複数サイト開くことができなかったこと`,
+    learning:
+      `もしかするとできるのかもしれないが，コードで内部的にウィンドウを開く際に，別ウィンドウで開こうとするとできないということ`,
+    appUrl: "https://bulkopen.madebynose.com/",
+    githubUrl: "https://github.com/nose-develop/",
+    thumbnail: "/apps/day-006.png",
+    thumbnailWidth: 1601,
+    thumbnailHeight: 907,
+  },
 ];
